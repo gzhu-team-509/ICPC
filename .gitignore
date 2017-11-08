@@ -1,0 +1,5 @@
+# Personal Environment Settings
+**/.vscode
+
+# Ignore Files for Debugging
+**/a.exe
