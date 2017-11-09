@@ -29,10 +29,10 @@ int main()
         cout << endl;
     }
 
-    /* 迭代器访问 */
+    /* 迭代器访问 - 注意vct.end()指向Vector的最后一个元素的后一个元素的位置 */
     {
         vector<int>::iterator p;
-        for (p = vct.begin(); p!=vct.end(); p++)
+        for (p = vct.begin(); p != vct.end(); p++)
         {
             cout << *p << " ";
         }
