@@ -41,7 +41,8 @@ int main()
 
     /* 删除元素 */
     {
-        while (vct.size()) vct.pop_back();
+        // while (vct.size()) vct.pop_back();
+        vct.clear();
         cout << vct.size() << endl;
     }
 }
