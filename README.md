@@ -6,6 +6,7 @@
 
 - **cant** 竞赛黑话
 - **STL** 标准模板库示例
+- **implemenet** 具体问题的编程实现
 
 1. **divide-and-conquer** 递归和分治策略
 2. **dynamic-programing** 动态规划
