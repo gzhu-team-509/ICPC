@@ -3,3 +3,4 @@
 
 # Ignore Files for Debugging
 **/a.exe
+**.class
