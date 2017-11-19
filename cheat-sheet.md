@@ -14,10 +14,24 @@ Stack, Vector, Map, Mutimap, List, Set, Queue, Priority_Queue, Deque
 
 - **随机访问迭代器** `begin()` `end()`
 
-- **向量** `capacity()` `Vector[pos]` 
+- **向量** `capacity()` `Vector[pos]`
 
-- **链表** `remove() remove_if()` `reverse()` `sort()` `unique()` 
+- **链表** `remove() remove_if()` `reverse()` `sort()` `unique()`
 
 - **映射** `make_pair()` `find()` `count()` `Map[Key]`
 
 - **集合** `equal_range()` `find()` `count()`
+
+## Java
+
+### BigInteger
+
+- **常量** ONE TEN ZERO
+- **构造函数** `(String val)` `(String val, int radix)` `negate()`
+- **四则运算** `add()` `subtract()` `divide()` `divideAndRemainder()` `remainder()` `mod()` `modPow(ex, m)` `pow()`
+- **位运算** `and()` `andNot()` `not()` `or()` `xor()` `shiftLeft()` `shiftRight()`
+- **比较** `equals()` `compareTo()` `max()` `min()`
+- **其他** `abs()` `clearBit(int n)` `flipBit(int n)` `gcd()` `getLowestSetBit()` `isProbablePrime()` `nextProbablePrime()`
+- **转换** `doubleValue()` `longValue()` `toString()`
+
+**BigDecimal** 在BigInteger的基础上支持表示小数
