@@ -7,9 +7,9 @@
 
 # ZWK线段树
 
-张伟昆线段树是线段树的变种，由清华大学张伟昆于2001年提出。相比于传统的线段树优势在于减少了递归操作和增加了位运算以减少常数。
+张伟昆线段树是线段树的变种，已知最早由清华大学张伟昆于2001年提出。相比于传统的线段树优势在于减少了递归操作和增加了位运算以减少常数。
 
 ## 参考资料
 
-- 维基百科 [线段树](https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%AE%B5%E6%A0%91_(%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2))
+- 维基百科 [线段树](https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%AE%B5%E6%A0%91_(%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2)) [线段树](https://zh.wikipedia.org/wiki/%E7%B7%9A%E6%AE%B5%E6%A8%B9_(%E5%84%B2%E5%AD%98%E5%8D%80%E9%96%93))
 - 清华大学 张伟昆 [PPT《统计的力量——线段树全接触》](https://wenku.baidu.com/view/f27db60ee87101f69e319544.html)
