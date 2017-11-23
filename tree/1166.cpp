@@ -20,7 +20,7 @@ int main()
     int t; sfi(t); // 测试用例的数量
     for (int kase = 1; kase <= t; kase++)
     {
-        // memset(tree, 0, sizeof(tree));
+        memset(tree, 0, sizeof(tree));
 
         int n; sfi(n); // 工兵营地的数量
         for (int i = 1; i <= n; i++) sfi(tree[INDEX + i]);
