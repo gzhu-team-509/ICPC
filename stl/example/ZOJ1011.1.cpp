@@ -1,10 +1,7 @@
-/* NTA */
 /**
- * 第一次尝试：
+ * NTA
  *
- * 难点：
- * 1）建树
- * 2）信号表的结构
+ * 难点在于建树以及填充信号表的结构
 **/
 #include <iostream>
 #include <vector>
@@ -25,7 +22,7 @@ bool judge(int signal, int node);
 int main()
 {
     int kase = 0;
-    while (cin >> tot >> legal >> unit, tot || left || unit)
+    while (cin >> tot >> legal >> unit, tot || legal || unit)
     {
         if (kase) cout << endl;         // 注意细节
         cout << "NTA" << ++kase << ":" << endl;
@@ -40,7 +37,7 @@ int main()
                     signal tmp;
                     cin >> tmp.left >> tmp.right;
                     table[i][j].push_back(tmp);
-    
+
                     if (getchar() == ' ') continue;
                     else break;
                 }
