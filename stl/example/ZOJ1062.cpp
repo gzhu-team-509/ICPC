@@ -1,6 +1,7 @@
 /* Trees Made to Order - Catalan，递归
  *
  * 计数问题要保持清醒头脑，从0开始计数使得整除“/”和取模“%”运算保持清楚的意义。
+ * 偏移计数法（寻址计数法）与整除取模运算，配合形态种类能写出简洁的代码。
 **/
 #include <iostream>
 using namespace std;
