@@ -2,6 +2,12 @@
 
 ## STL
 
+### 常用函数
+
+注意Priority_Queue大顶堆与sort()比较函数的区别。
+满足Priority_Queue比较函数判定条件的，在合并中作为子树。
+满足sort()比较函数判定条件的，在排序中靠前。
+
 ### 常用容器类型
 
 Stack, Vector, Map, Mutimap, List, Set, Queue, Priority_Queue, Deque
