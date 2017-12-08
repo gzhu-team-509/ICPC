@@ -17,5 +17,3 @@
 7. **graph** 图论
 8. **number-theory** 数论
 9. **combinatorics** 组合数学
-
-## 命名规则约定
