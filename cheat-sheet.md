@@ -12,11 +12,17 @@
 
 Stack, Vector, Map, Mutimap, List, Set, Queue, Priority_Queue, Deque
 
+### 仿函数
+
+greater<int>() [functional头文件]
+
 ### 接口
 
 - **构造器** `Container(n)` `Container(n, elem)` `Container(c)`
 
-- **元素操作** `empty()` `size()` `clear()` `swap()` 顺序访问容器`pop()` `push()` `top()` `front()` `back()` 随机访问容器`erase(pos)` `insert(pos, (n,) elem)` `pop_back()` `pop_front()` `push_back()` `push_front()`
+- **元素操作** `empty()` `size()` `clear()` `swap()`
+顺序访问容器`pop()` `push()` `top()` `front()` `back()` `pop_back()` `pop_front()` `push_back()` `push_front()`
+随机访问容器`erase(pos)` `insert(pos, (n,) elem)`
 
 - **随机访问迭代器** `begin()` `end()`
 
