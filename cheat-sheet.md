@@ -1,16 +1,47 @@
 > 建立CheatSheet的最终目的是不再需要使用它。
 
-## STL
+## 基本知识
 
-### 常用函数
+### 计算
 
-注意Priority_Queue大顶堆与sort()比较函数的区别。
-满足Priority_Queue比较函数判定条件的，在合并中作为子树。
-满足sort()比较函数判定条件的，在排序中靠前。
+快速幂
+
+### 数学
+
+- **数列** 斐波那契数列
+- **数论** 中位数 GCD LCM
+- **组合数学** Catalan
+
+### 图论
+
+- **单源图最短路径** Dijkstra
+- **最小生成树** Prim Kruskal
+
+### 结构
+
+- **基础结构** 高精度整数 二叉树
+- **区间查询** 二叉索引树（Fenwick，树状数组） 线段树（ZWK线段树）
+- **优先队列** 左偏树（快速合并）
+
+### 搜索
+
+二分搜索
+
+深度优先搜索 广度优先搜索
+
+## C++
+
+### 函数
+
+- **字符串处理** c-string `atoi() atol() atof()` string `to_string() stoi() stol() stoll() stod()`
 
 ### 常用容器类型
 
 Stack, Vector, Map, Mutimap, List, Set, Queue, Priority_Queue, Deque
+
+- 注意Priority_Queue大顶堆与sort()比较函数的区别。
+满足Priority_Queue比较函数判定条件的，在合并中作为子树。
+满足sort()比较函数判定条件的，在排序中靠前。
 
 ### 仿函数
 
