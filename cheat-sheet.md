@@ -69,7 +69,7 @@ greater<int>() [functional头文件]
 
 ### BigInteger
 
-- **常量** ONE TEN ZERO
+- **常量** `ONE` `TEN` `ZERO`
 - **构造函数** `(String val)` `(String val, int radix)` `negate()`
 - **四则运算** `add()` `subtract()` `divide()` `divideAndRemainder()` `remainder()` `mod()` `modPow(ex, m)` `pow()`
 - **位运算** `and()` `andNot()` `not()` `or()` `xor()` `shiftLeft()` `shiftRight()`
