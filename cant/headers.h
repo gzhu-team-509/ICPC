@@ -13,4 +13,6 @@
  * 
 **/ 
 
-// TO BE ADDED
+max
+min
+count
