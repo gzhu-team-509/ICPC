@@ -46,7 +46,7 @@ struct ZWKSegmentTree
 		}
 		return tot;
 	}
-} T(17);
+} t(17);
 
 int main()
 {
