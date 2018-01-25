@@ -2,5 +2,5 @@
 **/.vscode
 
 # Ignore Files for Debugging
-**/a.exe
+**.exe
 **.class
