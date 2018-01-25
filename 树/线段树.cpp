@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int maxN = 100100;
+const int maxN = 200100;
 
 int arr[maxN];
 
@@ -62,7 +62,7 @@ long long query(int rt, int l, int r)
 {
 	if (node[rt].l==l&&node[rt].r==r) 
 		return node[rt].val;
-	int mid = (l+r)/2;
+	int mid = (node[rt].l+node[rt].r)/2;
 	if (r<=mid)
 		return query(rt<<1, l, r);
 	else if(mid<l)
@@ -88,7 +88,7 @@ long long query_min(int rt, int l, int r)
 {
 	if (node[rt].l==l&&node[rt].r==r) 
 		return node[rt].vmn;
-	int mid = (l+r)/2;
+	int mid = (node[rt].l+node[rt].r)/2;
 	if (r<=mid)
 		return query_min(rt<<1, l, r);
 	else if(mid<l)
@@ -96,46 +96,3 @@ long long query_min(int rt, int l, int r)
 	else
 		return min(query_min(rt<<1, l, mid), query_min(rt<<1|1, mid+1, r));
 }
-
-int main()
-{
-	#ifdef LOCAL
-	freopen("in.txt", "r", stdin);
-	#endif
-	
-	int t, kase = 0; scanf("%d", &t);
-	while (t--)
-	{	
-		int n; scanf("%d", &n);
-		for (int i = 1; i <= n; ++i)
-			scanf("%d", &arr[i]);
-		init(); build(1, 1, n, arr);
-		
-		printf("Case %d:\n", ++kase);
-		while (true)
-		{
-			char cmd[10]; scanf("%s", cmd);
-			if (cmd[0] == 'E') break;
-			if (cmd[0] == 'A') {
-				int x, d; scanf("%d%d", &x, &d);
-				update(leaf[x], d);
-			}
-			if (cmd[0] == 'S') {
-				int x, d; scanf("%d%d", &x, &d);
-				update(leaf[x], -d);
-			}
-			if (cmd[0] == 'Q') {
-				int a, b; scanf("%d%d", &a, &b);
-				printf("%lld\n", query(1, a, b));
-			}
-			if (cmd[0] == 'M') {
-				int a, b; scanf("%d%d", &a, &b);
-				printf("%lld\n", query_max(1, a, b));
-			}
-			if (cmd[0] == 'N') {
-				int a, b; scanf("%d%d", &a, &b);
-				printf("%lld\n", query_min(1, a, b));
-			}
-		}
-	}
-} 
