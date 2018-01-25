@@ -1,12 +1,11 @@
-#include <bits/stdc++.h>
-using namespace std;
-
+// 注意编号为0的节点表示空节点
 struct LeftTree
 {
 	const static int MXN = 100100;
 	int tot = 0;
 	int l[MXN], r[MXN], v[MXN], d[MXN];
 	
+	// 初始化值为x的元素
 	int init(int x)
 	{
 		tot++;
@@ -15,6 +14,7 @@ struct LeftTree
 		return tot;
 	}
 	
+	// 合并堆顶编号为x, y的堆
 	int merge(int x, int y)
 	{
 		if (!x) return y;
@@ -28,36 +28,21 @@ struct LeftTree
 		return x;
 	}
 	
+	// 向堆顶编号为x的堆中插入值为v的元素
 	int insert(int x, int v)
 	{
 		return merge(x, init(v));
 	}
 	
+	// 取编号为x的堆的堆顶元素
 	int top(int x)
 	{
 		return v[x];
 	}
 	
+	// 弹出编号为x的堆的堆顶元素，返回新堆顶的编号
 	int pop(int x)
 	{
 		return merge(l[x], r[x]);
 	}
 } t;
-
-int main()
-{
-	int head = t.init(10);
-	for (int i = 1; i < 10; ++i)
-	{
-		head = t.insert(head, rand() + 1);
-		cout << t.top(head) << endl;
-	}
-	
-	cout << endl;
-	while (head != 0)
-	{
-		cout << t.top(head) << endl;
-		head = t.pop(head);
-	}
-	cout << endl;
-}
