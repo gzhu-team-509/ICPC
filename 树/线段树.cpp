@@ -1,10 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-const int maxN = 200100;
-
-int arr[maxN];
-
 int leaf[maxN];
 struct SegmentTreeNode{
 	int l, r;
@@ -131,30 +124,4 @@ long long query_min(int rt, int l, int r)
 		return query_min(rt<<1|1, l, r);
 	else
 		return min(query_min(rt<<1, l, mid), query_min(rt<<1|1, mid+1, r));
-}
-
-int main()
-{
-	#ifdef LOCAL
-	freopen("in.txt", "r", stdin);
-	#endif
-	
-	int n;
-	while (scanf("%d", &n) == 1 && n)
-	{
-		for (int i = 1; i <= n; ++i)
-			arr[i] = 0;
-		build(1, 1, n, arr);
-		for (int i = 1; i <= n; ++i)
-		{
-			int a, b; scanf("%d%d", &a, &b);
-			update(1, a, b, 1);
-		}
-		
-		for (int i = 1; i <= n; ++i)
-		{
-			printf("%lld", query(1, i, i));
-			putchar(i != n ? ' ' : '\n'); 
-		}
-	}
 }
