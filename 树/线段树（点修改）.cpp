@@ -1,3 +1,4 @@
+// 初始化，建树，修改和查询
 const int maxN = 200100;
 
 int leaf[maxN];
