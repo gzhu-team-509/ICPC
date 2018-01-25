@@ -38,6 +38,7 @@ struct ZWKSegmentTree
 		} while (n >>= 1);
 	}
 	
+	// 查询开区间(a, b)内的元素和
 	long long query(int a, int b)
 	{
 		long long tot = 0;
