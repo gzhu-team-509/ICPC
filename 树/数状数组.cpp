@@ -1,3 +1,4 @@
+// 树状数组，适用于单点修改，区间和查询
 #include <bits/stdc++.h>
 
 struct FenwickTree
@@ -71,4 +72,3 @@ int main()
 		}
 	}
 }
-
