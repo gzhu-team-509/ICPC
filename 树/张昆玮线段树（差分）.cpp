@@ -1,9 +1,8 @@
+// å¼ æ˜†ç®çº¿æ®µæ ‘çš„å·®åˆ†å˜ç§ï¼Œé€‚ç”¨äºåŒºé—´æœ€å€¼æŸ¥è¯¢
+// æ¸…ç©ºæ ‘ï¼Œå»ºæ ‘ï¼Œä¿®æ”¹å’ŒæŸ¥è¯¢
 #include <bits/stdc++.h>
 using namespace std;
 using LL = long long;
- 
-// ÕÅÀ¥çâÏß¶ÎÊ÷µÄ²î·Ö±äÖÖ
-// RMQÊÊÓÃ
  
 struct ZKWSegmentTree
 {
@@ -41,7 +40,7 @@ struct ZKWSegmentTree
         }
     }
      
-    // ²éÑ¯[l, r]ÉÏµÄ×î´óÖµ
+    // æŸ¥è¯¢[l, r]ä¸Šçš„æœ€å¤§å€¼
     long long query(int l, int r)
     {
         long long ans = 0;
@@ -104,4 +103,3 @@ int main()
         }
     }
 }
-
