@@ -1,3 +1,4 @@
+// 张昆玮线段树的一种实现，适用于区间和查询
 // 清空树，建树，修改和查询
 #include <bits/stdc++.h>
 using namespace std;
