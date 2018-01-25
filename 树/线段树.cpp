@@ -1,8 +1,9 @@
+const int maxN = 200100;
+
 int leaf[maxN];
 struct SegmentTreeNode{
 	int l, r;
 	long long val, vmx, vmn;
-	long long lazy;
 } node[maxN<<2]; 
 
 void init()
@@ -14,7 +15,6 @@ void init()
 void build(int rt, int l, int r, int *arr)
 {
 	node[rt].l = l, node[rt].r = r;
-	node[rt].lazy = 0;
 	if (l==r)
 	{
 		leaf[l] = rt;
@@ -39,18 +39,6 @@ void pushup(int rt)
 		node[rt].vmn = min(node[rt<<1].vmn, node[rt<<1|1].vmn);
 	}
 }
- 
-void pushdown(int rt)
-{
-	if (node[rt].lazy) {
-		node[rt].val += node[rt].lazy*(node[rt].r-node[rt].l+1);
-		node[rt].vmx += node[rt].lazy;
-		node[rt].vmn += node[rt].lazy;
-		node[rt<<1].lazy += node[rt].lazy;
-		node[rt<<1|1].lazy += node[rt].lazy;
-	}
-	node[rt].lazy = 0;
-}
 
 void modify(int rt, int val) 
 {
@@ -65,30 +53,10 @@ void update(int rt, int diff)
 	pushup(rt);
 }
 
-void update(int rt, int l, int r, int diff)
-{
-	if (l<=node[rt].l&&node[rt].r<=r) {
-		node[rt].lazy += diff;
-		return;
-	}
-	int mid = (node[rt].l+node[rt].r)/2;
-	if (r<=mid) {
-		update(rt<<1, l, r, diff);
-	} 
-	else if (mid<l) {
-		update(rt<<1|1, l, r, diff);
-	}
-	else {
-		update(rt<<1, l, r, diff);
-		update(rt<<1|1, l, r, diff);
-	}
-}
-
 long long query(int rt, int l, int r)
 {
-	if (node[rt].l==l&&node[rt].r==r)
-		return node[rt].val + node[rt].lazy;
-	pushdown(rt);
+	if (node[rt].l==l&&node[rt].r==r) 
+		return node[rt].val;
 	int mid = (node[rt].l+node[rt].r)/2;
 	if (r<=mid)
 		return query(rt<<1, l, r);
@@ -101,8 +69,7 @@ long long query(int rt, int l, int r)
 long long query_max(int rt, int l, int r)
 {
 	if (node[rt].l==l&&node[rt].r==r) 
-		return node[rt].vmx + node[rt].lazy;
-	pushdown(rt);
+		return node[rt].vmx;
 	int mid = (node[rt].l+node[rt].r)/2;
 	if (r<=mid)
 		return query_max(rt<<1, l, r);
@@ -114,9 +81,8 @@ long long query_max(int rt, int l, int r)
 
 long long query_min(int rt, int l, int r)
 {
-	if (node[rt].l==l&&node[rt].r==r)
-		return node[rt].vmn + node[rt].lazy;
-	pushdown(rt);
+	if (node[rt].l==l&&node[rt].r==r) 
+		return node[rt].vmn;
 	int mid = (node[rt].l+node[rt].r)/2;
 	if (r<=mid)
 		return query_min(rt<<1, l, r);
