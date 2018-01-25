@@ -1,6 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
-
+// 求指定字符串的回文半径
+// str - 字符串
+// len - 储存字符串的回文半径，注意空间大小
+// n   - 字符串的长度
 void manacher(char str[], int len[], int n)
 {
 	len[0] = 1;
@@ -13,16 +14,4 @@ void manacher(char str[], int len[], int n)
 		if (q + len[i] - 1> r)
 			j = i;
 	}
-}
-
-int main()
-{	
-	char str[] = "abccbaabccba";
-	int len[strlen(str) * 2];
-	
-	manacher(str, len, strlen(str));
-	for (int i = 0; i < strlen(str) * 2 - 1; ++i)
-		cout << len[i] <<  ' ';
-		
-	// 注意得到的len是回文半径 
 }

@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-
+// 查询指定日期是星期几，注意输入格式
 int whatday(int d, int m, int y)
 {
 	int ans;
@@ -12,14 +10,3 @@ int whatday(int d, int m, int y)
 		ans = (d + 2 * m * 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7; 
 	return ans; 
 }
-
-int main()
-{
-	int d, m, y;
-	printf("Day Month Year: \n"); 
-	while (scanf("%d%d%d", &d, &m, &y) == 3)
-	{
-		 printf("%d\n", whatday(d, m, y)); 
-	} 
-}
-
