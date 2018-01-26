@@ -90,7 +90,6 @@ void update(int rt, int l, int r, int diff)
 		node[rt].lazy += diff;
 		return;
 	}
-	pushdown(rt); 
 	int mid = (node[rt].l+node[rt].r)/2;
 	if (r<=mid) {
 		update(rt<<1, l, r, diff);
