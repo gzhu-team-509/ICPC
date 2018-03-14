@@ -1,5 +1,12 @@
 // 初始化，建树，修改和查询
 // 利用leaf数组可快速找到叶子节点
+
+
+// 线段树的空间问题
+// 一般情况下，空间开4倍即可
+// 如果pushup()方法中，上层节点主动收取下层节点的值，则需要8倍空间，以避免下层节点越界
+// 参见 http://codeforces.com/contest/610/submission/35762143
+
 const int maxN = 200100;
 
 int leaf[maxN];

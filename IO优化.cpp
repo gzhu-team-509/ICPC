@@ -12,3 +12,7 @@ inline void read(T& val) {
 		val = val * 10 + ch - '0';
 	val *= sign;
 }
+
+// 内存错误调试工具
+// 断言机制
+// DrMemory
