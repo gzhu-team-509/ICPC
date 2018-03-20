@@ -1,5 +1,7 @@
 #pragma GCC optimize("unroll-loops")
 
+#pragma comment(linker, "/STACK:16777216")
+
 #include <bits/stdc++.h>
 using namespace std;
 
